@@ -14,14 +14,21 @@ To get started with Ruby, you need to install Ruby on your local machine. You ca
 2. Alternatively, use a version manager like [RVM](https://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv) to manage Ruby versions on your system.
 
 Once Ruby is installed, you can verify it by running:
+
 ruby -v
+
+
 
 ## 🧑‍💻 Usage
 
 Clone this repository to your local machine:
+
 git clone https://github.com/mapaba79/ruby-for-beginners.git
 
+
+
 Navigate to the project directory:
+
 cd ruby-for-beginners
 
 
