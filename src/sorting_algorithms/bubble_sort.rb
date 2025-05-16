@@ -1,20 +1,17 @@
 def bubble_sort(arr)
-    n = arr.length
-    for i in 0...(n - 1)
-        swapped = false
-        for j in 0...(n - 1 - i)
-            if arr[j] > arr[j + 1]
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = true
-            end
-        end
-        break if !swapped
+  arr = arr.dup
+  (arr.length - 1).times do |i|
+    (0...(arr.length - 1 - i)).each do |j|
+      arr[j], arr[j + 1] = arr[j + 1], arr[j] if arr[j] > arr[j + 1]
     end
+  end
+  arr
 end
 
-arr = [76, 12, 93, 37, 4, 42, 21, 84, 99, 51]
-puts "Unsorted array: #{arr}"
+puts 'Digite os números separados por espaço: '
+entrada = gets.chomp
+numeros = entrada.split.map(&:to_i)
 
-bubble_sort(arr)
+ordenado = numeros.sort
 
-puts "Sorted array: #{arr}"
+puts "Números ordenados: #{ordenado.join(' ')}"
